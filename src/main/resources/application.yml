@@ -1,0 +1,26 @@
+---
+spring:
+  profiles: local
+server:
+  port: 8080
+zuul:
+  routes:
+    catalog:
+      url: http://localhost:8081/
+    order:
+      url: http://localhost:8082/
+#    auth:
+#      url: http://localhost:8099/
+#security:
+#  oauth2:
+#    client:
+#      client-id: example
+#      client-secret: example
+#      access-token-uri: http://localhost:8080/auth/oauth/token
+#      user-authorization-uri: http://localhost:8080/auth/oauth/authorize
+#      client-authentication-scheme: form
+#    resource:
+#      jwt:
+#        key-value: s3cr3t
+#    sso:
+#      login-path: /login
