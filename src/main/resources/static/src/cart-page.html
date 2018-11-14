@@ -12,6 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../catalog/src/cart-ajax.html">
 <link rel="import" href="../catalog/src/cart-item-list.html">
+<link rel="import" href="../order/src/order-place.html">
 
 
 <dom-module id="cart-page">
@@ -26,6 +27,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <cart-ajax url="/catalog/carts" user="[[user]]" cart-items="{{cartItems}}"></cart-ajax>
     <cart-item-list cart-items="[[cartItems]]"></cart-item-list>
+    
+    <order-place url="/order/orders" user="[[user]]" items="{{cartItems}}"></order-place>
   </template>
 
   <script>
